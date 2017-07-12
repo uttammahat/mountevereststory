@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,500,600,700|Open+Sans:400,600,700,800|Raleway:400,500,600,700,800,900');
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    font-family: 'cabin', sans-serif;
+}
+
+strong {
+    color: #292929;
+}
+
+p {
+    color: #585858;
+}
+
+@media only screen and (orientation: portrait) {
+    body {
+        overflow: hidden;
+    }
+    div#rotate {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        background: #f1f1f1;
+        z-index: 3;
+    }
+    .wrapper {
+        display: none;
+    }
+}
+
+#rotate .container {
+    display: inline-block;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#rotate svg {
+    width: 80px;
+}
+
+#rotate .container p {
+    font-family: sans-serif;
+    color: #999;
+    text-transform: uppercase;
+}
+
+
+/*preloader*/
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #7e6351;
+}
+
+#loader {
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+    border-radius: 50%;
+    display: block;
+    margin: -75px 0 0 -75px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#loader:before {
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    bottom: 15px;
+    right: 15px;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    div#rotate {
+        display: none;
+    }
+    .wrapper {
+        overflow-y: scroll;
+        height: 100%;
+    }
+    .first h1 {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 38%;
+        left: 69%;
+        color: #585858;
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+        text-transform: uppercase;
+        z-index: 2;
+        text-transform: uppercase;
+        background: #dadada;
+        padding: 10px 30px;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .first,
+    .second,
+    .third,
+    .fourth,
+    .fifth,
+    .sixth,
+    .seventh {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .bg1 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .bg2 {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .first .bg1 {
+        z-index: 2;
+        background: url('../img/foreground.png') no-repeat center center;
+        background-size: cover;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    .first .bg2 {
+        z-index: -1;
+        background: url('../img/background.png') no-repeat center center;
+        background-size: cover;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+    }
+    svg#NATGEO {
+        position: absolute;
+        width: 38%;
+        height: auto;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+    .second .bg1 {
+        background: url('../img/Mount%20Everest%20Story%202-photoshop.jpg') no-repeat 52%;
+        background-size: cover;
+    }
+    .blurb {
+        width: auto;
+        height: auto;
+        max-width: 400px;
+        background: #dadada;
+        text-transform: uppercase;
+        padding: 10px 30px;
+    }
+    .second .blurb {
+        position: absolute;
+        top: 35%;
+        left: 68%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: 10px 30px;
+    }
+    .third .bg1 {
+        background: url('../img/Mount%20Everest%20Story%203-photoshop.jpg') no-repeat 42%;
+        background-size: cover;
+    }
+    .third .blurb {
+        position: absolute;
+        top: 25%;
+        left: 32%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: 10px 30px;
+    }
+    .fourth .bg1 {
+        background: url('../img/Mount%20Everest%20Story%204.jpg') no-repeat center right;
+        background-size: cover;
+    }
+    .fifth .bg1 {
+        background: url('../img/Mount%20Everest%20Story%205-photoshop.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .fifth {
+        height: auto;
+        padding: 100px 0;
+    }
+    .container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        max-width: 1050px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+        flex-direction: row-reverse;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -ms-flex-line-pack: distribute;
+        align-content: space-around;
+    }
+    @media only screen and (max-width: 768px) {
+        .container {
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+    }
+    .georgeimg {
+        width: 340px;
+        height: 402px;
+        position: relative;
+        right: 60px;
+        z-index: 1;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    .fifth .blurb {
+        width: 100%;
+        max-width: 710px;
+        text-align: right;
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.8)));
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+        background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 100%);
+        position: relative;
+        padding: 40px 100px 40px 40px;
+        line-height: 32px;
+    }
+    .tile {
+        background: -webkit-linear-gradient(315deg, rgba(255, 0, 186, 0.1) 0%, rgba(250, 231, 19, 0.1) 100%), url(../img/George-Everest.jpg) no-repeat center center;
+        background: -o-linear-gradient(315deg, rgba(255, 0, 186, 0.1) 0%, rgba(250, 231, 19, 0.1) 100%), url(../img/George-Everest.jpg) no-repeat center center;
+        background: linear-gradient(135deg, rgba(255, 0, 186, 0.1) 0%, rgba(250, 231, 19, 0.1) 100%), url(../img/George-Everest.jpg) no-repeat center center;
+        -webkit-box-shadow: 0 3px 47px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 3px 47px rgba(0, 0, 0, 0.2);
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    .sixth .bg1 {
+        background: url('../img/Mount%20Everest%20Story%206-photoshop.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    .sixth .blurb {
+        width: 100%;
+        max-width: 640px;
+        background: rgba(218, 218, 218, 1);
+        letter-spacing: 4px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .seventh .blurb {
+        text-align: center;
+        width: 100%;
+        max-width: 280px;
+        z-index: 1;
+        position: absolute;
+        top: 13%;
+        left: 56%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    .seventh svg#NATGEO {
+        top: 29%;
+        left: 55%;
+        width: 30%;
+    }
+    .seventh .bg1 {
+        background: url('../img/natgeo-foreg.png') no-repeat 30%;
+        background-size: cover;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    .seventh .bg2 {
+        background: url('../img/natgeo-back.png') no-repeat 30%;
+        background-size: cover;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        -webkit-filter: blur(2px);
+        filter: blur(2px);
+        z-index: -1;
+    }
+}
