@@ -8,7 +8,7 @@ function moveBackground() {
     x += (lFollowX - x) * friction;
     y += (lFollowY - y) * friction;
     translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
-    $('.bgMove').css({
+    $('.bg').css({
         '-webit-transform': translate
         , '-moz-transform': translate
         , 'transform': translate
@@ -34,6 +34,5 @@ $('.js-tilt').tilt({
 $(document).ready(function () {
     setTimeout(function () {
         $("#loader-wrapper").fadeOut("slow");
-//        $("#preloader").addClass('slide');
     }, 400);
 });
