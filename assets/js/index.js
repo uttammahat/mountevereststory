@@ -8,7 +8,7 @@ function moveBackground() {
     x += (lFollowX - x) * friction;
     y += (lFollowY - y) * friction;
     translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
-    $('.bgMove').css({
+    $('.bg').css({
         '-webit-transform': translate
         , '-moz-transform': translate
         , 'transform': translate
@@ -22,6 +22,7 @@ $(window).on('mousemove click', function (e) {
     lFollowY = (10 * lMouseY) / 100;
 });
 moveBackground();
+
 /*georgeimg*/
 $('.js-tilt').tilt({
     scale: 1.1
@@ -31,9 +32,8 @@ $('.js-tilt').tilt({
 
 
 /*preloader*/
-$(document).ready(function () {
-    setTimeout(function () {
-        $("#loader-wrapper").fadeOut("slow");
-//        $("#preloader").addClass('slide');
-    }, 400);
+$(window).on('load', function() {
+  $('#loader').fadeOut();  
+  $('#loader-wrapper').delay(350).fadeOut('slow');
+  $('body').delay(350).css({'overflow':'visible'});
 });
