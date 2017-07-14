@@ -31,8 +31,8 @@ $('.js-tilt').tilt({
 
 
 /*preloader*/
-$(document).ready(function () {
-    setTimeout(function () {
-        $("#loader-wrapper").fadeOut("slow");
-    }, 400);
+$(window).on('load', function() {
+  $('#loader').fadeOut();  
+  $('#loader-wrapper').delay(350).fadeOut('slow');
+  $('body').delay(350).css({'overflow':'visible'});
 });
